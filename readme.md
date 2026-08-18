@@ -2,4 +2,4 @@
 Peter Sved
 
 ## Moduuli 1
-Tein tehtävän 1
+Tein tehtävän 1 ja 2
