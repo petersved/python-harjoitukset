@@ -1,5 +1,5 @@
-laji = input("Oletko ihminen, tonttu vai robotti?")
-ikä = int(input("minkä ikäinen olet?"))
+laji = input("Oletko ihminen, tonttu vai robotti?: ")
+ikä = int(input("minkä ikäinen olet?: "))
 
 print("voit tilata:")
 
