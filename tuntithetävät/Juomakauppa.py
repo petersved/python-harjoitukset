@@ -12,6 +12,6 @@ if laji == "tonttu" and ikä >= 100:
     print("- oluen")
 
 if laji == "robotti":
-    print ("- öljyä")
+    print("- öljyä")
 
 
