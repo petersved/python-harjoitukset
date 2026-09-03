@@ -17,6 +17,6 @@ Tein tehtävät 1, 2, 3 ja 4
 Tein tehtävät 1, 2, 3, 4, 5
 
 ## Moduuli 6
-Tein tehtävät 1, 2
+Tein tehtävät 1, 2, 3
 
  
