@@ -1,7 +1,8 @@
 import random
 
 def heitä_noppaa():
-    return random.randint(1, 6)
+    heitto = random.randint(1, 6)
+    return heitto
 
 while True:
     silmäluku = heitä_noppaa()
