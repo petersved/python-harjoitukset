@@ -1,3 +1,18 @@
+def hahmo():
+    print("Pelin hahmo: Haaland")
+
+def kieli():
+    print("Peliä voi pelata vain suomeksi")
+
+def lisää_reppuun(reppu):
+    esine = input("Mitä haluat lisätä reppuun?: ")
+    reppu.append(esine)
+
+def repun_sisältö(reppu):
+    print("Reppusi sisältö: ")
+    for esine in reppu:
+        print(esine)
+
 nimi = input("Mikä on nimesi?: ")
 ikä = int(input("Minkä ikäinen olet?: "))
 
@@ -6,6 +21,7 @@ if ikä < 12:
 else:
     print("Tervetuloa pelaamaan:", nimi)
 
+    reppu = []
     komento = ""
 
     while komento != "Lopeta":
@@ -13,21 +29,22 @@ else:
         print("Hahmo")
         print("Kieli")
         print("Reppu")
+        print("Lisää esineitä")
         print("Lopeta")
 
         komento = input("Anna komento jatkaaksesi: ")
 
         if komento == "Hahmo":
-            print("Pelin hahmo: Haaland")
+            hahmo()
 
         elif komento == "Reppu":
-            print("Reppusi on tyhjä")
+            repun_sisältö(reppu)
+            
 
         elif komento == "Kieli":
-            print("Peliä voi pelata vain suomeksi")
+            kieli()
+
+        elif komento == "Lisää esineitä":
+            lisää_reppuun(reppu)
 
     print("Peli lopetetaan")
-    
-
-
-    
