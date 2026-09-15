@@ -26,6 +26,6 @@ Tein tehtävät 1, 2, 3, 4
 Tein tehtävät 1, 2
 
 ## Moduuli 9
-Tein tehtävät 1, 
+Tein tehtävät 1, 2, 
 
  
