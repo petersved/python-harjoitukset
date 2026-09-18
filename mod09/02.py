@@ -14,7 +14,6 @@ class Auto:
         elif self.nopeus < 0:
             self.nopeus = 0
 
-
 auto = Auto("ABC-123", 142)
 
 print("Rekisteritunnus:", auto.rekisteritunnus)
@@ -31,4 +30,3 @@ print(f"Auton nopeus kiihdytyksen jälkeen: {auto.nopeus} km/h")
 auto.kiihdytä(-200)
 
 print(f"Auton nopeus hätäjarrutuksen jälkeen: {auto.nopeus} km/h")
-
