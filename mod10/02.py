@@ -35,7 +35,10 @@ class Talo:
             self.hissit.append(Hissi(alin, ylin))
 
     def aja_hissiä(self, hissin_numero, kerros):
-	    self.hissit[hissin_numero].siirry_kerrokseen(kerros)
+        self.hissit[hissin_numero].siirry_kerrokseen(kerros)
+
 
 talo1 = Talo(1, 10, 3)
 talo1.aja_hissiä(2, 4)
+
+
