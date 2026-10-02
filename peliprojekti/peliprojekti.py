@@ -1,3 +1,51 @@
+class Huone:
+    def __init__(self, nimi, kerros):
+        self.nimi = nimi
+        self.kerros = kerros
+        self.esineet = []
+
+class Esine:
+    def __init__(self, nimi, väri):
+        self.nimi = nimi
+        self.väri = väri
+
+class Pelaaja:
+    def __init__(self, nimi, ikä, sijainti):
+        self.nimi = nimi
+        self.ikä = ikä
+        self.sijainti = sijainti
+        self.esineet = []
+
+    def liiku(self, uusi_huone):
+        self.sijainti = uusi_huone
+
+    def kerää_esine(self):
+        if len(self.sijainti.esineet) > 0:
+            esine = self.sijainti.esineet[0]
+
+            self.esineet.append(esine)
+        pass
+
+
+
+#
+#--------Huoneet------------
+#
+
+luokka_huone = Huone("Luokkahuone", 6)
+hissi = Huone("Hissi", 6)
+rappuset = Huone("Rappuset", 6)
+
+#
+#-----------ESINEET----------
+#
+
+keltainen_avain = Esine("avain", "keltainen")
+sininen_avain = Esine("avain", "sininen")
+
+
+
+
 def hahmo():
     print("Pelin hahmo: Haaland")
 
