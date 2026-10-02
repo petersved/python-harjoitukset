@@ -35,6 +35,10 @@ class Pelaaja:
 luokka_huone = Huone("Luokkahuone", 6)
 hissi = Huone("Hissi", 6)
 rappuset = Huone("Rappuset", 6)
+a_siiven_vessa = Huone("A-siiven vessa", 6)
+b_siiven_vessa = Huone("B-siiven vessa", 6)
+toinen_kerros = Huone("2. kerros", 2)
+opettajienhuone = Huone("Opettajienhuone", 6)
 
 #
 #-----------ESINEET----------
