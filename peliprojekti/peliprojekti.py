@@ -82,6 +82,8 @@ opettajienhuone = Huone("Opettajienhuone", 6)
 keltainen_avain = Esine("avain", "keltainen")
 sininen_avain = Esine("avain", "sininen")
 
+#---ESINEIDEN SIJOITUS
+
 a_siiven_vessa.esineet.append(keltainen_avain)
 b_siiven_vessa.esineet.append(sininen_avain)
 
@@ -132,7 +134,7 @@ else:
             print("Tehtäväsi on päästä pois huomaamatta\n")
 
         #
-        #-----------
+        #----------- 
         #
             
             while True:
