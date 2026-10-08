@@ -1,3 +1,8 @@
+
+#
+#------LUODAAN LUOKAT---------
+#
+
 class Huone:
     def __init__(self, nimi, kerros):
         self.nimi = nimi
@@ -21,10 +26,35 @@ class Pelaaja:
 
     def kerää_esine(self):
         if len(self.sijainti.esineet) > 0:
+           
             esine = self.sijainti.esineet[0]
-
             self.esineet.append(esine)
-        pass
+            
+            if esine.väri == "keltainen":
+                print("Löysit keltaisen avaimen!")
+            
+            elif esine.väri == "sininen":
+                print("Löysit sinisen avaimen!")
+
+        else:
+            print("Täällä ei ole esinettä.")
+
+    def näytä_reppu(self):
+        if len(self.esineet) == 0:
+            print("Reppusi on tyhjä")
+
+        else:
+            print("Repussasi on:")
+            for esine in self.esineet:
+                print("-", esine.nimi, esine.väri)
+
+    def tarkista_avain(self, väri):
+        for esine in self.esineet:
+
+            if esine.nimi == "avain" and esine.väri == väri:
+                return True
+
+        return False
 
 
 
@@ -32,7 +62,7 @@ class Pelaaja:
 #--------Huoneet------------
 #
 
-luokka_huone = Huone("Luokkahuone", 6)
+luokkahuone = Huone("Luokkahuone", 6)
 hissi = Huone("Hissi", 6)
 rappuset = Huone("Rappuset", 6)
 a_siiven_vessa = Huone("A-siiven vessa", 6)
@@ -47,56 +77,191 @@ opettajienhuone = Huone("Opettajienhuone", 6)
 keltainen_avain = Esine("avain", "keltainen")
 sininen_avain = Esine("avain", "sininen")
 
+a_siiven_vessa.esineet.append(keltainen_avain)
+b_siiven_vessa.esineet.append(sininen_avain)
 
 
-
-def hahmo():
-    print("Pelin hahmo: Haaland")
-
-def kieli():
-    print("Peliä voi pelata vain suomeksi")
-
-def lisää_reppuun(reppu):
-    esine = input("Mitä haluat lisätä reppuun?: ")
-    reppu.append(esine)
-
-def repun_sisältö(reppu):
-    print("Reppusi sisältö: ")
-    for esine in reppu:
-        print(esine)
+#
+#---------Pelaajan tiedot--------
+#
+# Alle 12 vuotiaat ei voi pelata peliä.
 
 nimi = input("Mikä on nimesi?: ")
 ikä = int(input("Minkä ikäinen olet?: "))
 
 if ikä < 12:
-    print("Olet liian nuori pelaamaan. ")
+    print("\nOlet liian nuori pelaamaan. ")
+    exit()
+
 else:
-    print("Tervetuloa pelaamaan:", nimi)
+    print("\nTervetuloa pelaamaan:", nimi)
 
-    reppu = []
-    komento = ""
+    pelaaja = Pelaaja(nimi, ikä, luokkahuone)
 
-    while komento != "Lopeta":
-        print("Päävalikko:")
-        print("Hahmo")
-        print("Kieli")
-        print("Reppu")
-        print("Lisää esineitä")
-        print("Lopeta")
 
-        komento = input("Anna komento jatkaaksesi: ")
+#
+#--------Päävalikko--------
+#
+    
+    while True:
+        
+        print("\n          Päävalikko\n")
+        print("1 - Kieli")
+        print("2 - Aloita peli")
+        print("3 - Lopeta peli")
 
-        if komento == "Hahmo":
-            hahmo()
+        valinta = input("> ")
 
-        elif komento == "Reppu":
-            repun_sisältö(reppu)
+
+
+        if valinta == "1":
+
+            print()
+            print("Peliä voi pelata vain suomeksi.")
+
+
+        elif valinta == "2":
+
+            print("\nAloitetaan peli!\n")
+            print("Olet nukahtanut luokkaan ja jäänyt kouluun jumiin.")
+            print("Tehtäväsi on päästä pois huomaamatta\n")
+
+        #
+        #-----------
+        #
             
+            while True:
+                print()
+                print("Olet paikassa", pelaaja.sijainti.nimi)
+                print("Kerros", pelaaja.sijainti.kerros)
+                print()
 
-        elif komento == "Kieli":
-            kieli()
+                print("1 - Mene A-siiven vessaan")
+                print("2 - Mene B-siiven vessaan")
+                print("3 - Mene rappusiin")
+                print("4 - Mene hissiin")
+                print("5 - Mene opettajien huoneeseen")
+                print("6 - Kerää esine")
+                print("7 - Näytä reppu")
+                print("8 - Avaa luokkahuoneen ikkuna")
+                print("9 - Kysy apua")
+                print("10 - Sammuta valot")
+                print("11 - Lopeta peli")
 
-        elif komento == "Lisää esineitä":
-            lisää_reppuun(reppu)
+                toiminto = input("> ")
 
-    print("Peli lopetetaan")
+
+                if toiminto == "1":
+
+                    pelaaja.liiku(a_siiven_vessa)
+                    print("\nMenit A-siiven vessaan. ")
+
+
+                elif toiminto == "2":
+
+                    pelaaja.liiku(b_siiven_vessa)
+                    print("\nMenit B-siiven vessaan. ")
+
+                elif toiminto == "3":
+
+                    if pelaaja.tarkista_avain("keltainen"):
+
+                        print("\nSinulla on keltainen avain, pääset rappusiin! ")
+
+                        pelaaja.liiku(toinen_kerros) 
+
+                        print("\nSaavuit 2. kerrokseen ja pääsit ulos\n")
+                        print("Voitit pelin! ")
+
+                        break
+
+                    else: 
+                        print("\nSinulla ei ole keltaista avainta.")
+                        print("Et pääse rappusiin.")
+
+
+                elif toiminto == "4":
+
+                    if pelaaja.tarkista_avain("sininen"):
+
+                        print("\nSinulla on sininen avain, pääset hissiin!")
+
+                        pelaaja.liiku(toinen_kerros)
+
+                        print("\nSaavuit 2. kerrokseen ja pääsit ulos\n")
+                        print("Voitit pelin! ")
+
+                    else:
+                        print("\nSinulla ei ole sinistä avainta. ")
+                        print("Et pääse hissiin. ")
+
+
+                elif toiminto == "5":
+
+                    pelaaja.liiku(opettajienhuone)
+
+                    print("\nMenit opettajienhuoneeseen")
+                    print("\nJäit kiinni ja hävisit pelin")
+
+                    exit()
+
+                
+                elif toiminto == "6":
+
+                    pelaaja.kerää_esine()
+
+                
+                elif toiminto == "7":
+
+                    pelaaja.näytä_reppu()
+
+                
+                elif toiminto == "8":
+
+                    if pelaaja.sijainti == luokkahuone:
+
+                        print("\nAvasit luokkahuoneen ikkunan")
+                        print("Ikkunan takaa löytyi tikapuut joita pitkin kiivetä alas\n")
+                        print("\n Voitit pelin! ")
+
+                        break
+
+                    else:
+                        print("\nTässä huoneessa ei ole ikkunaa. ")
+
+
+
+                elif toiminto == "9":
+
+                    print("\nPyysit apua ja jäit kiinni")
+                    print("\n Hävisit pelin." )
+
+                    exit()
+
+                elif toiminto == "10":
+
+                    print("\nsammutit valot ja siten säästit energiaa!")
+
+
+                elif toiminto == "11":
+
+                    print("\n Peli lopetetaan \n")
+
+                    break
+
+                else:
+
+                    print("\nValitse 1, 2, 3, 4, 5, 6, 7, 8, 9 tai 10\n")
+
+
+
+
+        elif valinta == "3":
+
+            print("Peli lopetetaan")
+
+            exit()
+
+        else: 
+
+            print("Valitse 1, 2 tai 3. ")
