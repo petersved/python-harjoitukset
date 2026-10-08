@@ -56,6 +56,11 @@ class Pelaaja:
 
         return False
 
+    def näytä_sijainti(self):
+        print()
+        print("Olet huoneesse: ", self.sijainti.nimi)
+        print("Kerroksessa: ", self.sijainti.kerros)
+        print()
 
 
 #
@@ -131,11 +136,10 @@ else:
         #
             
             while True:
-                print()
-                print("Olet paikassa", pelaaja.sijainti.nimi)
-                print("Kerros", pelaaja.sijainti.kerros)
-                print()
 
+                pelaaja.näytä_sijainti()
+
+                
                 print("1 - Mene A-siiven vessaan")
                 print("2 - Mene B-siiven vessaan")
                 print("3 - Mene rappusiin")
