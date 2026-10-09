@@ -253,7 +253,7 @@ else:
 
                     print("\n Peli lopetetaan \n")
 
-                    break
+                    exit()
 
                 else:
 

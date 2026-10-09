@@ -7,4 +7,6 @@ Peli on komentorivikäyttöliittymällä pelattava peli. Pelin idea on, että pe
 
 Pelin voi hävitä jos pyytää apua jolloin pelaaja jää kiinni ja häviää pelin tai menemällä opettajienhuoneeseen.
 
+Kestäväkehitys on otettu huomioon jos sammuttaa valot säästää energiaa.
+
 
