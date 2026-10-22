@@ -34,9 +34,5 @@ Tein tehtävät 1, 2, 3
 ## Moduuli 11 
 Tein tehtävät 1
 
-# Ohjelmisto 2 
-
-## Moduuli 1
-
 
  
