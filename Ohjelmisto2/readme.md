@@ -6,4 +6,4 @@ Tehdyt tehtävät:
 
 - Tehtävä 1: 1 p
 - Tehtävä 2: 2 p
- 
+ - Tehtävä 3: 3 p
