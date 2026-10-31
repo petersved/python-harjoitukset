@@ -1,4 +1,9 @@
-# Ohjelmisto 2 
+## Ohjelmisto 2 
 
-## Moduuli 1
- test test
+### JS-Moduulit 1 ja 2
+
+Tehdyt tehtävät:
+
+-Tehtävä 1: 1 p
+-Tehtävä 2: 2 p
+ 
