@@ -50,3 +50,74 @@ p {
     text-align: center;
 
 }
+
+
+
+
+
+.tuotteet {
+    display: flex;
+    gap: 15px;
+    margin: 20px 5%;
+    text-align: left;
+}
+
+.tuote {
+    padding: 15px;
+    flex: 1;
+}
+
+.tuote img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.tuote h2 {
+    font-size: 20px;
+}
+
+.tuote p {
+    margin: 15px 0;
+    text-align: left;
+}
+
+
+
+
+
+.yhteystiedot {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 40px;
+    gap: 40px;
+}
+
+.yhteystiedot-text {
+    text-align: left;
+    flex: 1;
+}
+
+.yhteystiedot-text h1 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.yhteystiedot-text p {
+    font-size: 18px;
+    text-align: left;
+    margin: 0;
+}
+
+.kartta {
+    width: 60%;
+    height: 350px;
+}
+
+.kartta img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
