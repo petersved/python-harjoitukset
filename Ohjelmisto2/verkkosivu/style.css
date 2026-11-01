@@ -39,6 +39,7 @@ h1 {
 
     width: calc(100% - 80px);
     height: 270px;
+    aspect-ratio: 1600 / 1067;
     margin: 0 auto;
     display: block;
     object-fit: cover;
