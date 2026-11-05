@@ -1,3 +1,5 @@
+"use strict";
+
 const nimi = prompt("Kerro nimesi");
 
 const luku = Math.floor(Math.random() * 4) + 1;
