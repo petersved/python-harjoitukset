@@ -2,5 +2,5 @@
 
 const nimi = prompt("Mikä sinun nimesi on?");
 
-document.querySelector("#target").innerHTML =
+document.getElementById("target").innerHTML =
     "Hei, " + nimi + "!";

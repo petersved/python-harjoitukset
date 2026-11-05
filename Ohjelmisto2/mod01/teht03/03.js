@@ -8,7 +8,7 @@ const summa = luku1 + luku2 + luku3
 const keskiarvo = summa / 3
 const tulo = luku1 * luku2 * luku3
 
-document.querySelector("#target").innerHTML =
+document.getElementById("target").innerHTML =
     "Summa: " + summa + "<br>" +
     "Tulo: " + tulo + "<br>" +
     "Keskiarvo: " + keskiarvo;
