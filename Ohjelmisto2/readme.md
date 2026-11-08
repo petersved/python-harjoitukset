@@ -10,3 +10,14 @@ Tehdyt tehtävät:
 - Tehtävä 4: 3 p
 - Tehtävä 5: 3 p
 - Tehtävä 6: 3 p
+
+
+### JS-Moduuli 3
+
+Tehdyt tehtävät:
+
+- Tehtävä 1: 2p
+- Tehtävä 2: 2p
+- Tehtävä 3: 2p
+- Tehstävä 4: 2p
+- Tehtävä 5: 2p
