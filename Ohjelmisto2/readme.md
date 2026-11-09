@@ -2,7 +2,7 @@
 
 ### JS-Moduulit 1 ja 2
 
-[Linkki JS-moduuli 1 kansioon](https://petersved.github.io/python-harjoitukset/Ohjelmisto2/mod01/)
+[Linkki JS-moduulin 1 ja 2 kansioon](https://petersved.github.io/python-harjoitukset/Ohjelmisto2/mod01/)
 
 Tehdyt tehtävät:
 
@@ -16,6 +16,8 @@ Tehdyt tehtävät:
 **Yhteensä 15 p**
 
 ### JS-Moduuli 3
+
+[Linkki JS-moduulin 3 kansioon](https://petersved.github.io/python-harjoitukset/Ohjelmisto2/mod03/)
 
 Tehdyt tehtävät:
 
