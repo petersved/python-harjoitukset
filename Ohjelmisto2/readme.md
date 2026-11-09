@@ -2,7 +2,7 @@
 
 ### JS-Moduulit 1 ja 2
 
-[JS-moduuli 1 – Kaikki tehtävät](https://petersved.github.io/python-harjoitukset/Ohjelmisto2/mod01/)
+[Linkki JS-moduuli 1 kansioon](https://petersved.github.io/python-harjoitukset/Ohjelmisto2/mod01/)
 
 Tehdyt tehtävät:
 
